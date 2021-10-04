@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Psoriasis | Self Diagnose</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+  <link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
+  <link href="css/responsive.css" rel="stylesheet" type="text/css" />
+
+  <link href="css/owl.carousel.min.css" rel="stylesheet" type="text/css" />
+  <link href="css/owl.theme.default.min.css" rel="stylesheet" type="text/css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style>
+    .owl-stage {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-box;
+      display: box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-12 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+        <div class="wizard card-like">
+          <div class="wizard-header">
+            <div class="row">
+              <div class="col-xs-12">
+                <h1 class="text-center">An easy way to analyze the symptoms of<span>Psoriatic disease</span></h1>
+                <hr />
+                <div class="steps text-center">
+                  <div class="wizard-step active" style="display:none"></div>
+                  <div class="wizard-step"></div>
+                  <div class="wizard-step"></div>
+                  <div class="wizard-step"></div>
+                  <div class="wizard-step"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wizard-body">
+            <div class="step initial active">
+              <div class="question-box">
+                <img src="img/symp/1.png">
+                <p>Have you ever had a swollen joint(or joints)?</p>
+                <div class="answer-box">
+                  <button onclick="yesF(0)">Yes</button>
+                  <button onclick="noF(0)">No</button>
+                </div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="question-box">
+                <img src="img/symp/2.png">
+                <p>Has a doctor ever told you that you have arthritis?</p>
+                <div class="answer-box">
+                  <button onclick="yesF(1)">Yes</button>
+                  <button onclick="noF(1)">No</button>
+                </div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="question-box">
+                <img src="img/symp/3.png">
+                <p>Do your fingernails or toenails have holes or pits?</p>
+                <div class="answer-box">
+                  <button onclick="yesF(2)">Yes</button>
+                  <button onclick="noF(2)">No</button>
+                </div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="question-box">
+                <img src="img/symp/4.png">
+                <p>Have you had pain in your heel?</p>
+                <div class="answer-box">
+                  <button onclick="yesF(3)">Yes</button>
+                  <button onclick="noF(3)">No</button>
+                </div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="question-box">
+                <img src="img/symp/5.png">
+                <p>Have you had a finger or toe that was completely swollen and painful for no apparent reason?</p>
+                <div class="answer-box">
+                  <button onclick="yesF(4)">Yes</button>
+                  <button onclick="noF(4)">No</button>
+                </div>
+              </div>
+            </div>
+            <div class="step">
+              <div class="result-box">
+                <p class="result-tit">Your Score is<span id="score"></span></p>
+                <p class="result-dis">Your score suggests that anxiety has started to get in the way of how you live
+                  your daily life.
+                  Don’t be alarmed, this is very common and there are things you can do to improve your situation.
+                </p>
+                <div class="res-down">
+                  <a id="link" onclick="to_image()">Download Your Result</a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="wizard-footer">
+            <div class="btn-box">
+              <button onclick="prevBtnF()" id="wizard-prev" style="display:none" type="button"
+                class="btn btn-irv btn-irv-default left-btn">
+                Previous
+              </button>
+              <button id="wizard-next" onclick="skip()" type="button" class="btn btn-irv right-btn">
+                Skip
+              </button>
+              <button id="wizard-subm1" style="display:none" type="button" class="btn btn-irv right-btn">
+                Submit
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <canvas id="canvas"></canvas>
+
+
+
+
+  <script src="js/bootstrap.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+
+  <script>
+
+
+
+
+    $(".carousel-home").owlCarousel({
+      loop: false,
+      nav: false,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 2,
+          margin: 20,
+        },
+        1024: {
+          items: 3,
+          margin: 20,
+        },
+        1025: {
+          items: 3,
+          margin: 60,
+        }
+      }
+    });
+    var owl = $('.carousel-home');
+    $('.home-category .arrow-left').click(function () {
+      owl.trigger('prev.owl.carousel');
+    });
+    $('.home-category .arrow-right').click(function () {
+      owl.trigger('next.owl.carousel');
+    });
+  </script>
+</body>
+
+</html>

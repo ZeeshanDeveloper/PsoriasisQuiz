@@ -1,0 +1,62 @@
+/*Media - Stylesheet*/
+.mbl-nav-opener{
+    display: none !important;
+}
+@media (min-width: 1320px) and (max-width: 1370px) {
+    
+}
+@media (min-width: 0px) and (max-width: 1024px) {
+    
+}
+@media (min-width: 0px) and (max-width: 769px) {
+    
+}
+@media (min-width: 0px) and (max-width: 569px) {
+    #canvas{
+        top: -960px;
+        left: -960px;
+    }
+    .card-like {
+        margin-top: 15px;
+        padding: 20px 20px;
+    }
+    .answer-box button {
+        width: 42%;
+        padding: 9px 0px;
+    }
+    .btn-box .right-btn {
+        width: 95px;
+        font-size: 13px;
+        padding: 7px 0px;
+    }
+    .btn-box .left-btn{
+        width: 95px;
+        font-size: 13px;
+        padding: 7px 0px;
+    }
+    .wizard .wizard-header h1 span{
+        font-size: 25px;
+    }
+    .wizard .wizard-header .steps,
+    .wizard .wizard-header .steps .wizard-step{
+        height:6px;
+    }
+    .result-box .res-down{
+        width: 70%;
+    }
+    .result-box .result-tit {
+        font-size: 18px;
+    }
+    .result-box .result-tit span{
+        font-size: 26px;
+    }
+    .question-box img {
+        width: 135px;
+    }
+    .question-box p {
+        font-size: 18px;
+        padding: 0px 10px;
+    }
+}
+@media (min-width: 0px) and (max-width: 360px) {
+}
